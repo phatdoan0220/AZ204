@@ -1,8 +1,10 @@
 const questions = [];
 document.addEventListener("DOMContentLoaded", () => {
   console.log("ready", sources);
+  let c = "";
   sources.forEach((x, i) => {
     const a = [];
+    c = x.c || c;
     x.a = x.a?.trim() || "";
     let t = 1;
     let splitText = ["- ( )", "- (x)"];
@@ -25,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     const q = {
       i,
+      c,
       q: x.q,
       t: a.filter((t) => t.right).length == 1 ? 1 : 2,
       a,
@@ -52,12 +55,13 @@ const onSubmit = () => {
 };
 var question;
 const onReset = () => {
+  const cEl = document.getElementById("category");
   const qEl = document.getElementById("question");
   const aEl = document.getElementById("answer");
   question = JSON.parse(
     questions[Math.floor(Math.random() * questions.length)]
   );
-  console.log("question", question);
+  cEl.innerText = question.c;
   qEl.innerText = question.q;
   aEl.innerHTML = "";
   question.a.forEach((x, i) => {
