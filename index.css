@@ -6,12 +6,13 @@
 }
 
 button{
-    height: 2rem;
-    padding: 0 1rem;
+    height: 3rem;
+    padding: 0 2rem;
 }
 .right{
     background-color: greenyellow;
 }
 .wrong{
     background-color: red;
+
 }
