@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <script src="questions.js"></script>
+    <script src="index.js"></script>
+    <div class="app">
+        <div style="display: flex; margin-bottom: 1rem;">
+            <h1 style="flex-grow: 1; margin: 0;">AZ 204</h1>
+            <button type="button" id="reset">Reset</button>
+        </div>
+        <fieldset>
+            <legend># Azure Compute Resources</legend>
+            <div>
+                <!-- <div style="text-decoration: underline; ">Question 1: </div> -->
+                <div style="margin: .5rem 0 1rem;" id="question">You have two Hyper-V hosts named Host1 and Host2. Host1
+                    has an Azure
+                    virtual machine named VM1 that
+                    was deployed by using a custom Azure Resource Manager template.You need to move VM1 to Host2. What
+                    should you do?</div>
+                <div>Answer:</div>
+                <div id="answer" style="padding-top: .5rem;">
+                    <div class="item">
+                        <input type="radio" id="input_1" />
+                        <label for="input_1">From the Update management blade, click Enable.</label>
+                    </div>
+                </div>
+                <div style="padding-top: 1rem;">
+                    <button type="button" id="submit">Submit</button>
+                    <button type="button" id="next">Next</button>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+</body>
+
+</html>

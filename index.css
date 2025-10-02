@@ -1,0 +1,17 @@
+.app {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    font-size: 20px;
+}
+
+button{
+    height: 2rem;
+    padding: 0 1rem;
+}
+.right{
+    background-color: greenyellow;
+}
+.wrong{
+    background-color: red;
+}
